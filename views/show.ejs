@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Contents</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Last Name</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach((details) => { %>
+      <tr>
+        <td><%= details.name %></td>
+        <td><%= details.lastname %></td>
+        <td><a href="/edit/<%= details._id %>">Edit</a> - <a href="/delete/<%= details._id %>">Delete</a></td>
+      </tr>
+      <% }) %>
+    </tbody>
+    <button><a href="/">New...</a></button>
+  </table>
+</body>
+
+</html>
